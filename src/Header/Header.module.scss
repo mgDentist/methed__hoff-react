@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas:
+        "logo nav"
+        "srch srch";
+
+    @media (min-width: 820px) {
+        grid-template-areas:
+            "logo srch nav";
+        grid-template-columns: 94px 1fr auto;
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    .navigation {
+        grid-area: nav;
+    }
+
+    .search {
+        grid-area: srch;
+    }
+}
